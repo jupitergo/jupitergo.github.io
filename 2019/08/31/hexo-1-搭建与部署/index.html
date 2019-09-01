@@ -31,7 +31,7 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
     mediumzoom: false,
@@ -44,8 +44,8 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -56,33 +56,20 @@
   };
 </script>
 
-  <meta name="description" content="&amp;#x81EA;&amp;#x6709;&amp;#x642D;&amp;#x5EFA;&amp;#x4E2A;&amp;#x4EBA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x60F3;&amp;#x6CD5;,&amp;#x4ECA;&amp;#x513F;&amp;#x7528;hexo+github&amp;#x5B9E;&amp;#x73B0; &amp;#x73AF;&amp;#x5883;node.js&amp;#x56E0;&amp;#x4E3A; hexo &amp;#x662F;&amp;#x57">
-<meta name="keywords" content="搭建博客,前端,next,备忘">
+  <meta name="description" content="&amp;#x81EA;&amp;#x6709;&amp;#x642D;&amp;#x5EFA;&amp;#x4E2A;&amp;#x4EBA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x60F3;&amp;#x6CD5;,&amp;#x4ECA;&amp;#x513F;&amp;#x7528; ** hexo** + gitee &amp;#x5B9E;&amp;#x73B0; &amp;#x73AF;&amp;#x5883;&amp;#x9700;&amp;#x8981;&amp;#xFF1A;node &amp;amp;&amp;">
+<meta name="keywords" content="hexo,gitee,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo-1-快速搭建与部署">
 <meta property="og:url" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/index.html">
 <meta property="og:site_name" content="xdongZ&#39;s blog">
-<meta property="og:description" content="&amp;#x81EA;&amp;#x6709;&amp;#x642D;&amp;#x5EFA;&amp;#x4E2A;&amp;#x4EBA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x60F3;&amp;#x6CD5;,&amp;#x4ECA;&amp;#x513F;&amp;#x7528;hexo+github&amp;#x5B9E;&amp;#x73B0; &amp;#x73AF;&amp;#x5883;node.js&amp;#x56E0;&amp;#x4E3A; hexo &amp;#x662F;&amp;#x57">
+<meta property="og:description" content="&amp;#x81EA;&amp;#x6709;&amp;#x642D;&amp;#x5EFA;&amp;#x4E2A;&amp;#x4EBA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x60F3;&amp;#x6CD5;,&amp;#x4ECA;&amp;#x513F;&amp;#x7528; ** hexo** + gitee &amp;#x5B9E;&amp;#x73B0; &amp;#x73AF;&amp;#x5883;&amp;#x9700;&amp;#x8981;&amp;#xFF1A;node &amp;amp;&amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/nodejs.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/git.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/newFolder.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/-v.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/hexo-v.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/new8.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/hexo-s.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/hexo-start.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/newRepo.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/deployRepo.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/giteeNewRep.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/giteePages.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/giturl.png">
-<meta property="og:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/gitDeployRepo.png">
-<meta property="og:updated_time" content="2019-08-31T13:59:48.607Z">
+<meta property="og:image" content="https://gitee.com/xdongZ/blog/raw/master/img/static/helloWorld.png">
+<meta property="og:updated_time" content="2019-09-01T08:14:29.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo-1-快速搭建与部署">
-<meta name="twitter:description" content="&amp;#x81EA;&amp;#x6709;&amp;#x642D;&amp;#x5EFA;&amp;#x4E2A;&amp;#x4EBA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x60F3;&amp;#x6CD5;,&amp;#x4ECA;&amp;#x513F;&amp;#x7528;hexo+github&amp;#x5B9E;&amp;#x73B0; &amp;#x73AF;&amp;#x5883;node.js&amp;#x56E0;&amp;#x4E3A; hexo &amp;#x662F;&amp;#x57">
-<meta name="twitter:image" content="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/nodejs.png">
+<meta name="twitter:description" content="&amp;#x81EA;&amp;#x6709;&amp;#x642D;&amp;#x5EFA;&amp;#x4E2A;&amp;#x4EBA;&amp;#x535A;&amp;#x5BA2;&amp;#x7684;&amp;#x60F3;&amp;#x6CD5;,&amp;#x4ECA;&amp;#x513F;&amp;#x7528; ** hexo** + gitee &amp;#x5B9E;&amp;#x73B0; &amp;#x73AF;&amp;#x5883;&amp;#x9700;&amp;#x8981;&amp;#xFF1A;node &amp;amp;&amp;">
+<meta name="twitter:image" content="https://gitee.com/xdongZ/blog/raw/master/img/static/helloWorld.png">
   <link rel="canonical" href="http://xdongz.gitee.io/blog/2019/08/31/hexo-1-搭建与部署/">
 
 
@@ -132,9 +119,8 @@
   </style>
 </noscript>
 
-    <!-- 代码块复制功能 -->
-	<script type="text/javascript" src="/js/src/clipboard.js"></script>  
-	<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+   
+   
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -192,7 +178,7 @@
       
     
 
-    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">7</span></a>
 
   </li>
       
@@ -234,17 +220,40 @@
     <a href="/blog/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
     <main id="main" class="main">
@@ -289,11 +298,19 @@
                 
               
 
-              <time title="创建时间：2019-08-31 15:44:20 / 修改时间：21:59:48" itemprop="dateCreated datePublished" datetime="2019-08-31T15:44:20+08:00">2019-08-31</time>
+              <time title="创建时间：2019-08-31 15:44:20" itemprop="dateCreated datePublished" datetime="2019-08-31T15:44:20+08:00">2019-08-31</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-01 16:14:29" itemprop="dateModified" datetime="2019-09-01T16:14:29+08:00">2019-09-01</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -302,7 +319,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/前端-搭建博客/" itemprop="url" rel="index"><span itemprop="name">前端 - 搭建博客</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/web-hexo/" itemprop="url" rel="index"><span itemprop="name">web - hexo</span></a></span>
 
                 
                 
@@ -321,19 +338,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>&#x81EA;&#x6709;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7684;&#x60F3;&#x6CD5;,&#x4ECA;&#x513F;&#x7528;hexo+github&#x5B9E;&#x73B0;</p>
-</blockquote><h2 id="&#x73AF;&#x5883;"><a href="#&#x73AF;&#x5883;" class="headerlink" title="&#x73AF;&#x5883;"></a>&#x73AF;&#x5883;</h2><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><p>&#x56E0;&#x4E3A; hexo &#x662F;&#x57FA;&#x4E8E; node &#x6846;&#x67B6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5462;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;node.js&#xFF0C;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://nodejs.org/en/" target="_blank" rel="noopener">&#x8FD9;&#x91CC;</a></p><p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/nodejs.png" alt="nodejs"></p><h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>&#x5F53;&#x7136;&#x8FD8;&#x6709;git, &#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">&#x8FD9;&#x91CC;</a></p><a id="more"></a>
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+            <div class="post-gallery-row">
+              <img src="https://gitee.com/xdongZ/blog/raw/master/img/static/helloWorld.png" itemprop="contentUrl">
+            
+          
 
+          </div>
+        </div>
+        <p>&#x81EA;&#x6709;&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7684;&#x60F3;&#x6CD5;,&#x4ECA;&#x513F;&#x7528; ** hexo** + gitee &#x5B9E;&#x73B0;<br> &#x73AF;&#x5883;&#x9700;&#x8981;&#xFF1A;<strong>node</strong> &amp;&amp; <strong>git</strong></p>
+<ol>
+<li>&#x5B89;&#x88C5; <strong>hexo &#x811A;&#x624B;&#x67B6;</strong>&#xFF1A;  <code>cnpm install -g hexo-cli</code></li>
+<li><strong>&#x521D;&#x59CB;&#x5316; hexo</strong>&#xFF1A; <code>hexo init</code></li>
+<li>&#x5199;&#x65B0;&#x6587;&#x7AE0;&#xFF1A; <code>hexo new &quot;&#x65B0;&#x7B14;&#x8BB0;&quot;</code></li>
+<li>&#x672C;&#x5730;&#x67E5;&#x770B;&#xFF1A; <code>hexo clean &amp;&amp; hexo s</code></li>
+<li>&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#xFF1A; <code>npm install --save hexo-deployer-git</code></li>
+<li>&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;_config.yml &#x914D;&#x7F6E;&#xFF1A;<code>repo: https://xxxxxxxx/xx/xx/git</code></li>
+<li>&#x90E8;&#x7F72;github/coding/gitee&#xFF1A; <code>hexo chean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
+</ol>
+<p> <strong>hexo&#x6700;&#x5E38;&#x7528;&#x7684;&#x51E0;&#x4E2A;&#x547D;&#x4EE4;</strong>&#xFF1A;</p>
+<ul>
+<li><strong><em><code>hexo new &quot;&#x65B0;&#x7B14;&#x8BB0;&quot;</code></em></strong></li>
+<li><strong><em><code>hexo clean &amp;&amp; hexo s</code></em></strong></li>
+<li><strong><em><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></em></strong><blockquote>
+<p><code>hexo clean</code> &#x6E05;&#x9664;&#x7F13;&#x5B58;&#x6587;&#x4EF6; db.json &#x548C;&#x5DF2;&#x751F;&#x6210;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6; public<br><code>hexo s</code> hexo server &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x542F;&#x52A8;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;<br><code>hexo g</code> hexo generate &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x751F;&#x6210;&#x7F51;&#x7AD9;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x5230;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684; public &#x6587;&#x4EF6;&#x5939;<br><code>hexo d</code> hexo deploy &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7F51;&#x7AD9;&#x9759;&#x6001;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x90E8;&#x7F72;&#x5230;&#x8BBE;&#x5B9A;&#x7684;&#x4ED3;&#x5E93;<br><code>hexo new page aboutme</code> &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6807;&#x9898;&#x4E3A; aboutme &#x7684;&#x9875;&#x9762;&#xFF0C;&#x9ED8;&#x8BA4;&#x94FE;&#x63A5;&#x5730;&#x5740;&#x4E3A; &#x4E3B;&#x9875;&#x5730;&#x5740;/aboutme/</p>
+</blockquote>
+</li>
+</ul>
+<a id="more"></a>
 
-
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/git.png" alt="git"></p>
+<h3 id="&#x4E00;-&#x73AF;&#x5883;"><a href="#&#x4E00;-&#x73AF;&#x5883;" class="headerlink" title="&#x4E00;.&#x73AF;&#x5883;"></a>&#x4E00;.&#x73AF;&#x5883;</h3><h4 id="1-node-js"><a href="#1-node-js" class="headerlink" title="1.node.js"></a>1.node.js</h4><p>&#x56E0;&#x4E3A; hexo &#x662F;&#x57FA;&#x4E8E; node &#x6846;&#x67B6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5462;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;node.js&#xFF0C;&#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://nodejs.org/en/" target="_blank" rel="noopener">&#x8FD9;&#x91CC;</a></p>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/nodejs.png" alt></p>
+<h4 id="2-git"><a href="#2-git" class="headerlink" title="2.git"></a>2.git</h4><p>&#x5F53;&#x7136;&#x8FD8;&#x6709;git, &#x4E0B;&#x8F7D;&#x5730;&#x5740;: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">&#x8FD9;&#x91CC;</a></p>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/git.png" alt></p>
 <p>&#x4E0B;&#x597D;&#x540E;&#x5B89;&#x88C5;&#x5C31;&#x76F4;&#x63A5;&#x75AF;&#x72C2;&#x4E0B;&#x4E00;&#x6B65;,&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;,&#x4E0D;&#x8981;&#x52A8;,&#x53CD;&#x6B63;&#x770B;&#x5230;next &#x70B9;&#x5C31;&#x5B8C;&#x4E8B;&#x4E86;</p>
-<h2 id="&#x5B89;&#x88C5;hexo"><a href="#&#x5B89;&#x88C5;hexo" class="headerlink" title="&#x5B89;&#x88C5;hexo"></a>&#x5B89;&#x88C5;hexo</h2><p>1.&#x968F;&#x4FBF;&#x67D0;&#x5730;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</p>
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/newFolder.png" alt="node"></p>
+<h4 id="3-&#x5B89;&#x88C5;hexo"><a href="#3-&#x5B89;&#x88C5;hexo" class="headerlink" title="3.&#x5B89;&#x88C5;hexo"></a>3.&#x5B89;&#x88C5;hexo</h4><p>1.&#x968F;&#x4FBF;&#x67D0;&#x5730;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</p>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/newFolder.png" alt></p>
 <p>2.&#x5EFA;&#x597D;&#x540E;&#x8FDB;&#x53BB;&#x9F20;&#x6807;&#x53F3;&#x952E; git bash here<br>&#x8F93;&#x5165; <code>node -v</code> &#x770B;&#x4F1A;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x51FA;&#x7248;&#x672C;&#x53F7;,&#x63A5;&#x7740;&#x8F93;&#x5165;<code>npm -v</code>&#x540C;&#x7406;&#x770B;&#x6709;&#x65E0;&#x7248;&#x672C;&#x53F7;</p>
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/-v.png" alt="node"></p>
-<h3 id="&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;"><a href="#&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;" class="headerlink" title="&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;"></a>&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;</h3><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/-v.png" alt></p>
+<h4 id="4-&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;"><a href="#4-&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;" class="headerlink" title="4.&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;"></a>4.&#x5B89;&#x88C5;hexo&#x811A;&#x624B;&#x67B6;</h4><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>&#x7F51;&#x901F;&#x95EE;&#x9898;&#xFF0C;<a href="#1"> &#x5EFA;&#x8BAE;&#x4F7F;&#x7528; nrm&#xFF0C;&#x5207;&#x6362;&#x6DD8;&#x5B9D;&#x955C;&#x50CF;</a></p>
@@ -341,28 +384,30 @@
 <p>&#x67E5;&#x770B;&#x662F;&#x5426;&#x6210;&#x529F;&#x4E0E;&#x7248;&#x672C;</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo -v</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/hexo-v.png" alt="node"></p>
-<h2 id="&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;"><a href="#&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;" class="headerlink" title="&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;"></a>&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;</h2><p>1.<code>hexo init</code> - - &gt; &#x521D;&#x59CB;&#x5316;</p>
-<p>&#x56DE;&#x5230;git bash&#x4E2D;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;,&#x8F93;&#x5165;&#x5373;&#x53EF;&#x3002;<br>&#x521D;&#x59CB;&#x5316;&#x540E; ,&#x6587;&#x4EF6;&#x5939;&#x4F1A;&#x51FA;&#x73B0;8&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p>
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/new8.png" alt="node"></p>
-<p>2.<code>hexo clean &amp;&amp; hexo s</code> - - &gt; &#x672C;&#x5730;&#x67E5;&#x770B;<br>&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x6587;&#x4EF6; db.json &#x548C;&#x5DF2;&#x751F;&#x6210;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6; public &#x3002;(&#x7F51;&#x7AD9;&#x663E;&#x793A;&#x5F02;&#x5E38;&#x65F6;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x8BD5;&#x8BD5;&#x3002;)<br>&#x8FD9;&#x91CC;hexo s &#x662F; hexo server &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x547D;&#x4EE4;&#x6548;&#x679C;&#x4E00;&#x81F4;</p>
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/hexo-s.png" alt="node"><br><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/hexo-start.png" alt="node"></p>
-<h1 id="&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230;-github-gitee"><a href="#&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230;-github-gitee" class="headerlink" title="&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230; github/gitee"></a>&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230; github/gitee</h1><h2 id="&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><a href="#&#x5B89;&#x88C5;&#x63D2;&#x4EF6;" class="headerlink" title="&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"></a>&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h2><h3 id="npm-install-save-hexo-deployer-git-gt-&#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><a href="#npm-install-save-hexo-deployer-git-gt-&#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;" class="headerlink" title="npm install --save hexo-deployer-git - - &gt; &#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"></a><code>npm install --save hexo-deployer-git</code> - - &gt; &#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h3><p>(&#x56DE;&#x5230;git bash&#x4E2D;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;,&#x8F93;&#x5165;)</p>
-<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><h3 id="1-github-&#x65B0;&#x589E;&#x4ED3;&#x5E93;-new-repository"><a href="#1-github-&#x65B0;&#x589E;&#x4ED3;&#x5E93;-new-repository" class="headerlink" title="1.github &#x65B0;&#x589E;&#x4ED3;&#x5E93; new repository"></a>1.github &#x65B0;&#x589E;&#x4ED3;&#x5E93; new repository</h3><blockquote>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/hexo-v.png" alt></p>
+<h3 id="&#x4E8C;-&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;"><a href="#&#x4E8C;-&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;" class="headerlink" title="&#x4E8C;.&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;"></a>&#x4E8C;.&#x672C;&#x5730;&#x521B;&#x5EFA;&#x9879;&#x76EE;</h3><h4 id="1-hexo-init-gt-&#x521D;&#x59CB;&#x5316;"><a href="#1-hexo-init-gt-&#x521D;&#x59CB;&#x5316;" class="headerlink" title="1.hexo init - - &gt; &#x521D;&#x59CB;&#x5316;"></a>1.<code>hexo init</code> - - &gt; &#x521D;&#x59CB;&#x5316;</h4><p>&#x56DE;&#x5230;git bash&#x4E2D;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;,&#x8F93;&#x5165;&#x5373;&#x53EF;&#x3002;<br>&#x521D;&#x59CB;&#x5316;&#x540E; ,&#x6587;&#x4EF6;&#x5939;&#x4F1A;&#x51FA;&#x73B0;8&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/new8.png" alt></p>
+<h4 id="2-hexo-clean-amp-amp-hexo-s-gt-&#x672C;&#x5730;&#x67E5;&#x770B;"><a href="#2-hexo-clean-amp-amp-hexo-s-gt-&#x672C;&#x5730;&#x67E5;&#x770B;" class="headerlink" title="2.hexo clean &amp;&amp; hexo s - - &gt; &#x672C;&#x5730;&#x67E5;&#x770B;"></a>2.<code>hexo clean &amp;&amp; hexo s</code> - - &gt; &#x672C;&#x5730;&#x67E5;&#x770B;</h4><p>&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x6587;&#x4EF6; db.json &#x548C;&#x5DF2;&#x751F;&#x6210;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6; public &#x3002;(&#x7F51;&#x7AD9;&#x663E;&#x793A;&#x5F02;&#x5E38;&#x65F6;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x8BD5;&#x8BD5;&#x3002;)<br>&#x8FD9;&#x91CC;hexo s &#x662F; hexo server &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x547D;&#x4EE4;&#x6548;&#x679C;&#x4E00;&#x81F4;</p>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/hexo-s.png" alt><br><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/hexo-start.png" alt></p>
+<h3 id="&#x4E09;-&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230;-github-gitee"><a href="#&#x4E09;-&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230;-github-gitee" class="headerlink" title="&#x4E09;.&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230; github/gitee"></a>&#x4E09;.&#x5C06;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5230; github/gitee</h3><h4 id="npm-install-save-hexo-deployer-git-gt-&#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><a href="#npm-install-save-hexo-deployer-git-gt-&#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;" class="headerlink" title="npm install --save hexo-deployer-git - - &gt; &#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"></a><code>npm install --save hexo-deployer-git</code> - - &gt; &#x672C;&#x5730;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h4><p>(&#x56DE;&#x5230;git bash&#x4E2D;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;,&#x8F93;&#x5165;)</p>
+<h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><h5 id="1-github-&#x65B0;&#x589E;&#x4ED3;&#x5E93;-new-repository"><a href="#1-github-&#x65B0;&#x589E;&#x4ED3;&#x5E93;-new-repository" class="headerlink" title="1.github &#x65B0;&#x589E;&#x4ED3;&#x5E93; new repository"></a>1.github &#x65B0;&#x589E;&#x4ED3;&#x5E93; new repository</h5><blockquote>
 <p>!!!&#x6CE8;&#x610F;!!!&#x4ED3;&#x5E93;&#x547D;&#x540D;&#x5F00;&#x5934;&#x4E00;&#x5B9A;&#x8981;&#x662F;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x6635;&#x79F0;.</p>
 </blockquote>
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/newRepo.png" alt="node"></p>
-<h3 id="2-&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;"><a href="#2-&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;" class="headerlink" title="2.&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;"></a>2.&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;</h3><p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/deployRepo.png" alt="node"></p>
-<h3 id="3-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-github"><a href="#3-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-github" class="headerlink" title="3.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; &#x63D0;&#x4EA4; github"></a>3.<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> - - &gt; &#x63D0;&#x4EA4; github</h3><p>&#x8FD9;&#x65F6;&#x5B83;&#x4F1A;&#x8BA9;&#x4F60;&#x586B;&#x4F60;&#x7684;username&#x548C;password &#x4F5C;&#x4E3A;&#x8FDB;&#x5165;&#x4ED3;&#x5E93;&#x7684;&#x51ED;&#x8BC1;(&#x6BD5;&#x7ADF;&#x8C01;&#x90FD;&#x4E0D;&#x60F3;&#x8BA9;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#x88AB;&#x522B;&#x4EBA;&#x778E;&#x641E;&#x5427;)<br>&#x6240;&#x6709;&#x90FD;&#x9A8C;&#x8BC1;&#x5B8C;&#x6BD5;&#x540E;,&#x51FA;&#x73B0; INFO Deploy done: git &#x8868;&#x660E;&#x90E8;&#x7F72;&#x5B8C;&#x6210; &#x8FD9;&#x65F6;&#x518D;&#x770B;&#x4F60;&#x4E4B;&#x524D;&#x65B0;&#x5EFA;&#x7684;&#x4ED3;&#x5E93;&#x5219;&#x4F1A;&#x53D1;&#x73B0;Code&#x4E0B;&#x4F1A;&#x591A;&#x51FA;&#x8BB8;&#x591A;&#x6587;&#x4EF6;,&#x8FD9;&#x65F6;&#x76F4;&#x63A5;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x8F93;&#x5165;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#x597D;&#x7684;github&#x535A;&#x5BA2;&#x7F51;&#x5740;, hexo&#x5BF9;github&#x90E8;&#x7F72;&#x5B8C;&#x6BD5;! &#x535A;&#x5BA2;&#x4E5F;&#x7EC8;&#x7B97;&#x642D;&#x5EFA;&#x6210;&#x529F;&#x3002;</p>
-<h3 id="4-&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A;-jupitergo-github-io"><a href="#4-&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A;-jupitergo-github-io" class="headerlink" title="4.&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A; jupitergo.github.io"></a>4.&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A; <a href="jupitergo.github.io">jupitergo.github.io</a></h3><h2 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h2><h3 id="1-gitte-&#x65B0;&#x589E;&#x4ED3;&#x5E93;"><a href="#1-gitte-&#x65B0;&#x589E;&#x4ED3;&#x5E93;" class="headerlink" title="1.gitte &#x65B0;&#x589E;&#x4ED3;&#x5E93;"></a>1.gitte &#x65B0;&#x589E;&#x4ED3;&#x5E93;</h3><p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/giteeNewRep.png" alt="giteeNewRep"></p>
-<h3 id="2-&#x5F00;&#x542F;-Gitee-Pages-&#x670D;&#x52A1;"><a href="#2-&#x5F00;&#x542F;-Gitee-Pages-&#x670D;&#x52A1;" class="headerlink" title="2.&#x5F00;&#x542F; Gitee Pages &#x670D;&#x52A1;"></a>2.&#x5F00;&#x542F; Gitee Pages &#x670D;&#x52A1;</h3><blockquote>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/newRepo.png" alt></p>
+<h5 id="2-&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;"><a href="#2-&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;" class="headerlink" title="2.&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;"></a>2.&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;</h5><p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/deployRepo.png" alt></p>
+<h5 id="3-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-github"><a href="#3-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-github" class="headerlink" title="3.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; &#x63D0;&#x4EA4; github"></a>3.<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> - - &gt; &#x63D0;&#x4EA4; github</h5><p>&#x8FD9;&#x65F6;&#x5B83;&#x4F1A;&#x8BA9;&#x4F60;&#x586B;&#x4F60;&#x7684;username&#x548C;password &#x4F5C;&#x4E3A;&#x8FDB;&#x5165;&#x4ED3;&#x5E93;&#x7684;&#x51ED;&#x8BC1;(&#x6BD5;&#x7ADF;&#x8C01;&#x90FD;&#x4E0D;&#x60F3;&#x8BA9;&#x81EA;&#x5DF1;&#x7684;&#x535A;&#x5BA2;&#x88AB;&#x522B;&#x4EBA;&#x778E;&#x641E;&#x5427;)<br>&#x6240;&#x6709;&#x90FD;&#x9A8C;&#x8BC1;&#x5B8C;&#x6BD5;&#x540E;,&#x51FA;&#x73B0; INFO Deploy done: git &#x8868;&#x660E;&#x90E8;&#x7F72;&#x5B8C;&#x6210; &#x8FD9;&#x65F6;&#x518D;&#x770B;&#x4F60;&#x4E4B;&#x524D;&#x65B0;&#x5EFA;&#x7684;&#x4ED3;&#x5E93;&#x5219;&#x4F1A;&#x53D1;&#x73B0;Code&#x4E0B;&#x4F1A;&#x591A;&#x51FA;&#x8BB8;&#x591A;&#x6587;&#x4EF6;,&#x8FD9;&#x65F6;&#x76F4;&#x63A5;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x8F93;&#x5165;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#x597D;&#x7684;github&#x535A;&#x5BA2;&#x7F51;&#x5740;, hexo&#x5BF9;github&#x90E8;&#x7F72;&#x5B8C;&#x6BD5;! &#x535A;&#x5BA2;&#x4E5F;&#x7EC8;&#x7B97;&#x642D;&#x5EFA;&#x6210;&#x529F;&#x3002;</p>
+<h5 id="4-&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A;-jupitergo-github-io"><a href="#4-&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A;-jupitergo-github-io" class="headerlink" title="4.&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A; jupitergo.github.io"></a>4.&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A; <a href="https://jupitergo.github.io/" target="_blank" rel="noopener">jupitergo.github.io</a></h5><h4 id="gitee"><a href="#gitee" class="headerlink" title="gitee"></a>gitee</h4><h5 id="1-gitte-&#x65B0;&#x589E;&#x4ED3;&#x5E93;"><a href="#1-gitte-&#x65B0;&#x589E;&#x4ED3;&#x5E93;" class="headerlink" title="1.gitte &#x65B0;&#x589E;&#x4ED3;&#x5E93;"></a>1.gitte &#x65B0;&#x589E;&#x4ED3;&#x5E93;</h5><p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/giteeNewRep.png" alt></p>
+<h5 id="2-&#x5F00;&#x542F;-Gitee-Pages-&#x670D;&#x52A1;"><a href="#2-&#x5F00;&#x542F;-Gitee-Pages-&#x670D;&#x52A1;" class="headerlink" title="2.&#x5F00;&#x542F; Gitee Pages &#x670D;&#x52A1;"></a>2.&#x5F00;&#x542F; Gitee Pages &#x670D;&#x52A1;</h5><blockquote>
 <p>gitee &#x9700;&#x8981;&#x624B;&#x52A8;&#x5F00;&#x542F;&#x670D;&#x52A1;&#xFF0C;&#x4E14;&#x624B;&#x52A8;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#xFF08;&#x6765;&#x4E2A;&#x4F1A;&#x5458;&#x5C31; &#x4E0D;&#x7528;&#x62C5;&#x5FC3;~ &#x5751;&#x3002;&#x3002;&#x3002;&#xFF09;</p>
 </blockquote>
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/giteePages.png" alt="giteePages"></p>
-<h3 id="3-&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;"><a href="#3-&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;" class="headerlink" title="3.&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;"></a>3.&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;</h3><p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/giturl.png" alt="giturl"></p>
-<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/gitDeployRepo.png" alt="gitDeployRepo"></p>
-<h3 id="4-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-gitee"><a href="#4-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-gitee" class="headerlink" title="4.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; &#x63D0;&#x4EA4; gitee"></a>4.<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> - - &gt; &#x63D0;&#x4EA4; gitee</h3><h3 id="5-&#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;-xdongz-gitee-io-blog"><a href="#5-&#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;-xdongz-gitee-io-blog" class="headerlink" title="5. &#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE; xdongz.gitee.io/blog"></a>5. &#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE; <a href="https://xdongz.gitee.io/blog">xdongz.gitee.io/blog</a></h3><hr>
-<h2 id="nrm&#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;"><a href="#nrm&#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;" class="headerlink" title="nrm&#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;"></a><code>nrm</code>&#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;</h2><p><a name="1">&#x4F5C;&#x7528;&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6700;&#x5E38;&#x7528;&#x7684;NPM&#x5305;&#x955C;&#x50CF;&#x5730;&#x5740;&#xFF0C;&#x80FD;&#x591F;&#x8BA9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x7684;&#x5207;&#x6362;&#x5B89;&#x88C5;&#x5305;&#x65F6;&#x5019;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#xFF1B;</a><br>&#x4EC0;&#x4E48;&#x662F;&#x955C;&#x50CF;&#xFF1A;&#x539F;&#x6765;&#x5305;&#x521A;&#x4E00;&#x5F00;&#x59CB;&#x662F;&#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x56FD;&#x5916;&#x7684;NPM&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x7F51;&#x7EDC;&#x539F;&#x56E0;&#xFF0C;&#x7ECF;&#x5E38;&#x8BBF;&#x95EE;&#x4E0D;&#x5230;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x56FD;&#x5185;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x548C;&#x5B98;&#x7F51;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x7684;NPM&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#xFF0C;&#x6570;&#x636E;&#x90FD;&#x662F;&#x4ECE;&#x4EBA;&#x5BB6;&#x90A3;&#x91CC;&#x62FF;&#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF1B;</p>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/giteePages.png" alt></p>
+<blockquote>
+<p>&#x5F00;&#x542F;&#x5F3A;&#x5236;&#x4F7F;&#x7528;https</p>
+</blockquote>
+<h5 id="3-&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;"><a href="#3-&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;" class="headerlink" title="3.&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;"></a>3.&#x8BBE;&#x7F6E;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;</h5><p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/giturl.png" alt></p>
+<p><img src="/blog/2019/08/31/hexo-1-&#x642D;&#x5EFA;&#x4E0E;&#x90E8;&#x7F72;/gitDeployRepo.png" alt></p>
+<h5 id="4-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-gitee"><a href="#4-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-&#x63D0;&#x4EA4;-gitee" class="headerlink" title="4.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; &#x63D0;&#x4EA4; gitee"></a>4.<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> - - &gt; &#x63D0;&#x4EA4; gitee</h5><h5 id="5-&#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;-xdongz-gitee-io-blog"><a href="#5-&#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;-xdongz-gitee-io-blog" class="headerlink" title="5. &#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE; xdongz.gitee.io/blog"></a>5. &#x624B;&#x52A8;&#x66F4;&#x65B0;Pages&#x670D;&#x52A1;&#xFF0C;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE; <a href="https://xdongz.gitee.io/blog/">xdongz.gitee.io/blog</a></h5><hr>
+<h4 id="nrm-&#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;"><a href="#nrm-&#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;" class="headerlink" title="nrm &#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;"></a><a name="1"><strong><em>nrm</em></strong> &#x7684;&#x5B89;&#x88C5;&#x4F7F;&#x7528;</a></h4><p>&#x4F5C;&#x7528;&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6700;&#x5E38;&#x7528;&#x7684;NPM&#x5305;&#x955C;&#x50CF;&#x5730;&#x5740;&#xFF0C;&#x80FD;&#x591F;&#x8BA9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x7684;&#x5207;&#x6362;&#x5B89;&#x88C5;&#x5305;&#x65F6;&#x5019;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#xFF1B;<br>&#x4EC0;&#x4E48;&#x662F;&#x955C;&#x50CF;&#xFF1A;&#x539F;&#x6765;&#x5305;&#x521A;&#x4E00;&#x5F00;&#x59CB;&#x662F;&#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x56FD;&#x5916;&#x7684;NPM&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x7F51;&#x7EDC;&#x539F;&#x56E0;&#xFF0C;&#x7ECF;&#x5E38;&#x8BBF;&#x95EE;&#x4E0D;&#x5230;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x56FD;&#x5185;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x548C;&#x5B98;&#x7F51;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x7684;NPM&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#xFF0C;&#x6570;&#x636E;&#x90FD;&#x662F;&#x4ECE;&#x4EBA;&#x5BB6;&#x90A3;&#x91CC;&#x62FF;&#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF1B;</p>
 <ol>
 <li><p>&#x8FD0;&#x884C;<code>npm i nrm -g</code>&#x5168;&#x5C40;&#x5B89;&#x88C5;<code>nrm</code>&#x5305;&#xFF1B;</p>
 </li>
@@ -402,13 +447,11 @@
           
           <div class="post-tags">
             
-              <a href="/blog/tags/搭建博客/" rel="tag"># 搭建博客</a>
+              <a href="/blog/tags/hexo/" rel="tag"># hexo</a>
             
-              <a href="/blog/tags/前端/" rel="tag"># 前端</a>
+              <a href="/blog/tags/gitee/" rel="tag"># gitee</a>
             
-              <a href="/blog/tags/next/" rel="tag"># next</a>
-            
-              <a href="/blog/tags/备忘/" rel="tag"># 备忘</a>
+              <a href="/blog/tags/github/" rel="tag"># github</a>
             
           </div>
         
@@ -479,7 +522,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js"><span class="nav-number">1.1.</span> <span class="nav-text">node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git"><span class="nav-number">1.2.</span> <span class="nav-text">git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.</span> <span class="nav-text">安装hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo脚手架"><span class="nav-number">2.1.</span> <span class="nav-text">安装hexo脚手架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地创建项目"><span class="nav-number">3.</span> <span class="nav-text">本地创建项目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将项目部署到-github-gitee"><span class="nav-number"></span> <span class="nav-text">将项目部署到 github/gitee</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装插件"><span class="nav-number">1.</span> <span class="nav-text">安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-install-save-hexo-deployer-git-gt-本地安装插件"><span class="nav-number">1.1.</span> <span class="nav-text">npm install --save hexo-deployer-git - - &gt; 本地安装插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">2.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-github-新增仓库-new-repository"><span class="nav-number">2.1.</span> <span class="nav-text">1.github 新增仓库 new repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置仓库配置"><span class="nav-number">2.2.</span> <span class="nav-text">2.设置仓库配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-提交-github"><span class="nav-number">2.3.</span> <span class="nav-text">3.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; 提交 github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-访问测试：-jupitergo-github-io"><span class="nav-number">2.4.</span> <span class="nav-text">4.访问测试： jupitergo.github.io</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitee"><span class="nav-number">3.</span> <span class="nav-text">gitee</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-gitte-新增仓库"><span class="nav-number">3.1.</span> <span class="nav-text">1.gitte 新增仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-开启-Gitee-Pages-服务"><span class="nav-number">3.2.</span> <span class="nav-text">2.开启 Gitee Pages 服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置站点配置"><span class="nav-number">3.3.</span> <span class="nav-text">3.设置站点配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-提交-gitee"><span class="nav-number">3.4.</span> <span class="nav-text">4.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; 提交 gitee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-手动更新Pages服务，测试访问-xdongz-gitee-io-blog"><span class="nav-number">3.5.</span> <span class="nav-text">5. 手动更新Pages服务，测试访问 xdongz.gitee.io/blog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nrm的安装使用"><span class="nav-number">4.</span> <span class="nav-text">nrm的安装使用</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-环境"><span class="nav-number">1.</span> <span class="nav-text">一.环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-node-js"><span class="nav-number">1.1.</span> <span class="nav-text">1.node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-git"><span class="nav-number">1.2.</span> <span class="nav-text">2.git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-安装hexo"><span class="nav-number">1.3.</span> <span class="nav-text">3.安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-安装hexo脚手架"><span class="nav-number">1.4.</span> <span class="nav-text">4.安装hexo脚手架</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-本地创建项目"><span class="nav-number">2.</span> <span class="nav-text">二.本地创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-hexo-init-gt-初始化"><span class="nav-number">2.1.</span> <span class="nav-text">1.hexo init - - &gt; 初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-hexo-clean-amp-amp-hexo-s-gt-本地查看"><span class="nav-number">2.2.</span> <span class="nav-text">2.hexo clean &amp;&amp; hexo s - - &gt; 本地查看</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-将项目部署到-github-gitee"><span class="nav-number">3.</span> <span class="nav-text">三.将项目部署到 github/gitee</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-install-save-hexo-deployer-git-gt-本地安装插件"><span class="nav-number">3.1.</span> <span class="nav-text">npm install --save hexo-deployer-git - - &gt; 本地安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#github"><span class="nav-number">3.2.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-github-新增仓库-new-repository"><span class="nav-number">3.2.1.</span> <span class="nav-text">1.github 新增仓库 new repository</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-设置仓库配置"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.设置仓库配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-提交-github"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; 提交 github</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-访问测试：-jupitergo-github-io"><span class="nav-number">3.2.4.</span> <span class="nav-text">4.访问测试： jupitergo.github.io</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gitee"><span class="nav-number">3.3.</span> <span class="nav-text">gitee</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-gitte-新增仓库"><span class="nav-number">3.3.1.</span> <span class="nav-text">1.gitte 新增仓库</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-开启-Gitee-Pages-服务"><span class="nav-number">3.3.2.</span> <span class="nav-text">2.开启 Gitee Pages 服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-设置站点配置"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.设置站点配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d-gt-提交-gitee"><span class="nav-number">3.3.4.</span> <span class="nav-text">4.hexo clean &amp;&amp; hexo g &amp;&amp; hexo d - - &gt; 提交 gitee</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-手动更新Pages服务，测试访问-xdongz-gitee-io-blog"><span class="nav-number">3.3.5.</span> <span class="nav-text">5. 手动更新Pages服务，测试访问 xdongz.gitee.io/blog</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nrm-的安装使用"><span class="nav-number">3.4.</span> <span class="nav-text">nrm 的安装使用</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -541,7 +584,11 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -575,6 +622,11 @@
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
 
     </div>
   </aside>
@@ -618,7 +670,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">1.6k</span> 字
+      博客全站共： <span class="post-count">2.2k</span> 字
     </span>
 </div>
 <!-- 新增访客统计代码 END-->
@@ -685,6 +737,7 @@ setInterval("createtime()",250);
 
 
 
+  <script src="/blog/js/local-search.js?v=7.3.0"></script>
 
 
 
@@ -698,13 +751,16 @@ setInterval("createtime()",250);
 
 
 
-  
-
-  
 
   
 
   
 
+  
+
+   <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+  
 </body>
 </html>
