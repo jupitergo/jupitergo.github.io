@@ -9,13 +9,13 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
@@ -27,11 +27,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '7.3.0',
+    version: '7.4.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":true},
+    sidebar: {"position":"left","display":"always","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: true,
     mediumzoom: false,
@@ -89,7 +89,6 @@
 </script>
 
   <title>hexo-3-解决图片路径方法 | xdongZ's blog</title>
-  <meta name="generator" content="Hexo 3.9.0">
   
 
 
@@ -123,8 +122,6 @@
   </style>
 </noscript>
 
-   
-   
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -260,6 +257,10 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
@@ -353,7 +354,7 @@
 <h3 id="&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4E0E;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><a href="#&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4E0E;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;" class="headerlink" title="&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4E0E;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"></a>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4E0E;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h3><h4 id="1-&#x9996;&#x5148;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x7684;-post-asset-folder-&#x8BBE;&#x7F6E;&#x4E3A;true"><a href="#1-&#x9996;&#x5148;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x7684;-post-asset-folder-&#x8BBE;&#x7F6E;&#x4E3A;true" class="headerlink" title="1.&#x9996;&#x5148;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x7684; post_asset_folder:&#x8BBE;&#x7F6E;&#x4E3A;true"></a>1.&#x9996;&#x5148;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x7684; post_asset_folder:&#x8BBE;&#x7F6E;&#x4E3A;true</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span>        <span class="comment">#&#x662F;&#x5426;&#x542F;&#x7528;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x5939;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/08/31/hexo-3-&#x5904;&#x7406;&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x7B49;&#x95EE;&#x9898;/paft.png" alt></p>
-<h4 id="2-&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;-package-json-&#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"><a href="#2-&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;-package-json-&#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;" class="headerlink" title="2.&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B; package.json &#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"></a>2.&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B; package.json &#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;</h4><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;^0.0.1&quot;</span>,</span><br></pre></td></tr></table></figure>
+<h4 id="2-&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;-package-json-&#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"><a href="#2-&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;-package-json-&#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;" class="headerlink" title="2.&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B; package.json &#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"></a>2.&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B; package.json &#x4E2D;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;^0.0.1&quot;</span>,</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/08/31/hexo-3-&#x5904;&#x7406;&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x7B49;&#x95EE;&#x9898;/package-image.jpg" alt></p>
 <h4 id="3-&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"><a href="#3-&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;" class="headerlink" title="3.&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;"></a>3.&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</h4><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-<span class="built_in">image</span> --<span class="built_in">save</span></span><br></pre></td></tr></table></figure>
@@ -366,22 +367,7 @@
 <p><img src="/2019/08/31/hexo-3-&#x5904;&#x7406;&#x56FE;&#x7247;&#x8DEF;&#x5F84;&#x7B49;&#x95EE;&#x9898;/photos.png" alt></p>
 <p>&#x8FD9;&#x6837;&#x90E8;&#x7F72;&#x4E4B;&#x540E;&#xFF0C;&#x56FE;&#x7247;&#x96C6;&#x5728; <em><a href="https://gitee.com/xdongZ/blog/raw/master/img/static/" target="_blank" rel="noopener">https://gitee.com/xdongZ/blog/raw/master/img/static/</a></em> &#x8DEF;&#x5F84;&#x4E0B;</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">photos:</span></span><br><span class="line"><span class="attr">- https:</span><span class="string">//gitee.com/xdongZ/blog/raw/master/img/static/xxxx.png</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-	  
-	  
-	<div>
-
-	<!--
-    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------</div>
-	-->
-	<div style="text-align:center;color: #ccc;font-size:14px;">------------- The End -------------</div>
-
-</div>
-
-	
     </div>
-	
-	
-
 
     
     
@@ -499,12 +485,6 @@
             <a href="/categories/">
           
         
-        
-        
-          
-        
-          
-        
         <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span>
         </a>
@@ -518,61 +498,16 @@
             <a href="/tags/">
           
         
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
     
   </nav>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://github.com/jupitergo" title="GitHub &rarr; https://github.com/jupitergo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-    
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://jupitergo@aliyun.com" title="E-Mail &rarr; https://jupitergo@aliyun.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-    
-  </div>
 
 
 
       </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-      
 
     </div>
   </aside>
@@ -590,56 +525,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">xdongZ</span>
 </div>
-
-
-<!-- 这里注释掉了 -->
-<!-- 由 壁咚咚 强力驱动 v3.9.0| 主题 – NexT.Gemini v7.3.0 -->
-<!--
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">壁咚咚</a> 强力驱动 v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
--->
-
-<!-- 新增访客统计代码 -->
-
-<div class="busuanzi-count">
-    <script async="" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
-    </span>
-    <div class="powered-by"></div>
-    <span class="site-uv">
-      <i class="fa fa-eye"></i>
-      访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
-    </span>
-    <!-- 博客字数统计 -->
-    <span class="site-pv">
-      <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">2.2k</span> 字
-    </span>
-</div>
-<!-- 新增访客统计代码 END-->
-
-<!-- 在网页底部添加网站运行时间 -->
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-<script>
-    var now = new Date();
-    function createtime() {
-        var grt= new Date("08/31/2019 00:00:00");//此处修改你的建站时间或者网站上线时间
-        now.setTime(now.getTime()+250);
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "Run for "+dnum+" Days ";
-        document.getElementById("times").innerHTML = hnum + " Hours " + mnum + " m " + snum + " s";
-    }
-setInterval("createtime()",250);
-</script>
-
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.4.0</div>
 
         
 
@@ -667,44 +555,42 @@ setInterval("createtime()",250);
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
-<script src="/js/schemes/muse.js?v=7.3.0"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
 
-<script src="/js/next-boot.js?v=7.3.0"></script>
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.3.0"></script>
-
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js?v=7.4.0"></script>
 
 
 
   
 
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   
 
   
 
-   
-  
 </body>
 </html>
