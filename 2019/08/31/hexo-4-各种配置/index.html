@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="&amp;#x4F7F;&amp;#x7528;&amp;#x5404;&amp;#x79CD;&amp;#x5C0F;&amp;#x5999;&amp;#x62DB;  more (&amp;#x6587;&amp;#x7AE0;&amp;#x5185;&amp;#x5BB9;&amp;#x5728;&amp;#x6B64;&amp;#x6807;&amp;#x7B7E;&amp;#x4E4B;&amp;#x524D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;&amp;#x5728;&amp;#x9996;&amp;#x9875;&amp;#x5C55;">
+<meta name="keywords" content="hexo,next,more,fancybox">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-4-各种使用小妙招">
+<meta property="og:url" content="https://jupitergo.github.io/2019/08/31/hexo-4-各种配置/index.html">
+<meta property="og:site_name" content="xdongZ&#39;s blog">
+<meta property="og:description" content="&amp;#x4F7F;&amp;#x7528;&amp;#x5404;&amp;#x79CD;&amp;#x5C0F;&amp;#x5999;&amp;#x62DB;  more (&amp;#x6587;&amp;#x7AE0;&amp;#x5185;&amp;#x5BB9;&amp;#x5728;&amp;#x6B64;&amp;#x6807;&amp;#x7B7E;&amp;#x4E4B;&amp;#x524D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;&amp;#x5728;&amp;#x9996;&amp;#x9875;&amp;#x5C55;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gitee.com/xdongZ/blog/raw/master/img/static/witty.jpg">
+<meta property="og:updated_time" content="2019-09-01T08:12:01.893Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo-4-各种使用小妙招">
+<meta name="twitter:description" content="&amp;#x4F7F;&amp;#x7528;&amp;#x5404;&amp;#x79CD;&amp;#x5C0F;&amp;#x5999;&amp;#x62DB;  more (&amp;#x6587;&amp;#x7AE0;&amp;#x5185;&amp;#x5BB9;&amp;#x5728;&amp;#x6B64;&amp;#x6807;&amp;#x7B7E;&amp;#x4E4B;&amp;#x524D;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;&amp;#x5728;&amp;#x9996;&amp;#x9875;&amp;#x5C55;">
+<meta name="twitter:image" content="https://gitee.com/xdongZ/blog/raw/master/img/static/witty.jpg">
+  <link rel="canonical" href="https://jupitergo.github.io/2019/08/31/hexo-4-各种配置/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>hexo-4-各种使用小妙招 | xdongZ's blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xdongZ's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">脑袋不好，多做笔记呗~</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://jupitergo.github.io/2019/08/31/hexo-4-各种配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xdongZ">
+      <meta itemprop="description" content="哈哈壁咚咚">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xdongZ's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">hexo-4-各种使用小妙招
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-31 23:06:09" itemprop="dateCreated datePublished" datetime="2019-08-31T23:06:09+08:00">2019-08-31</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-01 16:12:01" itemprop="dateModified" datetime="2019-09-01T16:12:01+08:00">2019-09-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web-hexo-next/" itemprop="url" rel="index"><span itemprop="name">Web - hexo - next</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+            <div class="post-gallery-row">
+              <img src="https://gitee.com/xdongZ/blog/raw/master/img/static/witty.jpg" itemprop="contentUrl">
+            
+          
+
+          </div>
+        </div>
+        <p>&#x4F7F;&#x7528;&#x5404;&#x79CD;&#x5C0F;&#x5999;&#x62DB;</p>
+<ol>
+<li><p>more (&#x6587;&#x7AE0;&#x5185;&#x5BB9;&#x5728;&#x6B64;&#x6807;&#x7B7E;&#x4E4B;&#x524D;&#x7684;&#x5185;&#x5BB9;&#x5728;&#x9996;&#x9875;&#x5C55;&#x793A;&#xFF0C;&#x4E4B;&#x540E;&#x4E3A;<strong>&#x9605;&#x8BFB;&#x5168;&#x672C;</strong>&#x6807;&#x7B7E;&#x9690;&#x85CF;)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>photos (&#x5728;&#x6587;&#x7AE0;&#x5934;&#x5C55;&#x793A;&#x56FE;&#x7247;,&#x56FE;&#x7247;&#x70B9;&#x51FB;&#x7F29;&#x653E;)</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">photos:</span><br><span class="line">- http:<span class="regexp">//</span>bruce.u.qiniudn.com<span class="regexp">/2013/</span><span class="number">11</span><span class="regexp">/27/</span>reading<span class="regexp">/photos-0.jpg</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<blockquote>
+<p>&#x6211;&#x5C06;&#x56FE;&#x7247;&#x653E;&#x7F6E;&#x5728; blog/source/img/static/ &#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;<br>&#x90E8;&#x7F72;&#x5230; gitee &#x4E0A;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF08;&#x4F8B;&#xFF1A;&#xFF09; <strong><a href="https://gitee.com/xdongZ/blog/raw/master/img/static/test.png" target="_blank" rel="noopener">https://gitee.com/xdongZ/blog/raw/master/img/static/test.png</a></strong>&#x4F7F;&#x7528;</p>
+</blockquote>
+<a id="more"></a>
+
+
+<h3 id="more-gt-&#x7AD9;&#x70B9;&#x9996;&#x9875;&#x4E0D;&#x663E;&#x793A;&#x6587;&#x7AE0;&#x5168;&#x6587;"><a href="#more-gt-&#x7AD9;&#x70B9;&#x9996;&#x9875;&#x4E0D;&#x663E;&#x793A;&#x6587;&#x7AE0;&#x5168;&#x6587;" class="headerlink" title="more - - &gt; &#x7AD9;&#x70B9;&#x9996;&#x9875;&#x4E0D;&#x663E;&#x793A;&#x6587;&#x7AE0;&#x5168;&#x6587;"></a>more - - &gt; &#x7AD9;&#x70B9;&#x9996;&#x9875;&#x4E0D;&#x663E;&#x793A;&#x6587;&#x7AE0;&#x5168;&#x6587;</h3><p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x6587;&#x7AE0;&#x4F7F;&#x7528;<!-- more -->&#x6807;&#x5FD7;&#x6765;&#x7CBE;&#x786E;&#x63A7;&#x5236;&#x6587;&#x7AE0;&#x7684;&#x6458;&#x8981;&#x9884;&#x89C8;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x5C31;&#x662F;&#x5728;&#x8FD9;&#x4E2A;&#x6BB5;&#x843D;&#x7684;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;&#x4E86;&#x8BE5;&#x6807;&#x5FD7;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x6587;&#x5728;&#x9996;&#x9875;&#x7684;&#x9884;&#x89C8;&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x5230;&#x8FD9;&#x4E2A;&#x6BB5;&#x843D;&#x4E3A;&#x6B62;&#x3002;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="photos-gt-Next&#x4E3B;&#x9898;&#x7684;-fancybox-&#x5C55;&#x793A;&#x56FE;&#x7247;"><a href="#photos-gt-Next&#x4E3B;&#x9898;&#x7684;-fancybox-&#x5C55;&#x793A;&#x56FE;&#x7247;" class="headerlink" title="photos - - &gt; Next&#x4E3B;&#x9898;&#x7684; fancybox &#x5C55;&#x793A;&#x56FE;&#x7247;"></a>photos - - &gt; Next&#x4E3B;&#x9898;&#x7684; fancybox &#x5C55;&#x793A;&#x56FE;&#x7247;</h3><h4 id="&#x5B89;&#x88C5;-fancybox-&#x63D2;&#x4EF6;"><a href="#&#x5B89;&#x88C5;-fancybox-&#x63D2;&#x4EF6;" class="headerlink" title="&#x5B89;&#x88C5; fancybox &#x63D2;&#x4EF6;"></a>&#x5B89;&#x88C5; <a href="https://github.com/theme-next/theme-next-fancybox3" target="_blank" rel="noopener">fancybox</a> &#x63D2;&#x4EF6;</h4><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Xdong@DESKTOP-IE91OG7 MINGW64 ~<span class="regexp">/blog</span></span><br><span class="line"><span class="regexp">$ cd themes/next</span></span><br><span class="line">$ ls</span><br><span class="line">_config.yml  docs/            languages/  LICENSE.md    README.md  source/</span><br><span class="line">crowdin.yml  gulpfile.coffee  layout/     package.json  scripts/</span><br><span class="line"></span><br><span class="line">Xdong@DESKTOP-IE91OG7 MINGW64 ~<span class="regexp">/blog/themes</span><span class="regexp">/next</span></span><br><span class="line"><span class="regexp">git clone https:/</span><span class="regexp">/github.com/theme</span>-<span class="keyword">next</span>/theme-<span class="keyword">next</span>-fancybox3 source/<span class="class"><span class="keyword">lib</span>/<span class="title">fancybox</span></span></span><br><span class="line"></span><br><span class="line">Cloning into <span class="string">&apos;source/lib/fancybox&apos;</span>...</span><br><span class="line"><span class="symbol">remote:</span> Enumerating <span class="symbol">objects:</span> <span class="number">3</span>, done.</span><br><span class="line"><span class="symbol">remote:</span> Counting <span class="symbol">objects:</span> <span class="number">100</span>% (<span class="number">3</span>/<span class="number">3</span>), done.</span><br><span class="line"><span class="symbol">remote:</span> Compressing <span class="symbol">objects:</span> <span class="number">100</span>% (<span class="number">3</span>/<span class="number">3</span>), done.</span><br><span class="line"><span class="symbol">remote:</span> Total <span class="number">34</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>), pack-reused <span class="number">31</span></span><br><span class="line">Unpacking <span class="symbol">objects:</span> <span class="number">100</span>% (<span class="number">34</span>/<span class="number">34</span>), done.</span><br></pre></td></tr></table></figure>
+
+<h5 id="next-config-yml&#x4E3B;&#x9898;&#x914D;&#x7F6E;"><a href="#next-config-yml&#x4E3B;&#x9898;&#x914D;&#x7F6E;" class="headerlink" title="next config.yml&#x4E3B;&#x9898;&#x914D;&#x7F6E;"></a>next config.yml&#x4E3B;&#x9898;&#x914D;&#x7F6E;</h5><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># For more information: https://fancyapps.com/fancybox</span></span><br><span class="line"><span class="attr">fancybox:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Next&#x4E3B;&#x9898;&#x7684;fancybox&#x5C55;&#x793A;&#x56FE;&#x7247;</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2016</span><span class="bullet">-09</span><span class="bullet">-03</span> <span class="number">17</span><span class="string">:15:22</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">photos:</span></span><br><span class="line"><span class="attr">- http:</span><span class="string">//bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg</span></span><br><span class="line"><span class="attr">- http:</span><span class="string">//bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+            
+              <a href="/tags/next/" rel="tag"># next</a>
+            
+              <a href="/tags/more/" rel="tag"># more</a>
+            
+              <a href="/tags/fancybox/" rel="tag"># fancybox</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/31/hexo-3-处理图片路径等问题/" rel="next" title="hexo-3-解决图片路径方法">
+                  <i class="fa fa-chevron-left"></i> hexo-3-解决图片路径方法
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#more-gt-站点首页不显示文章全文"><span class="nav-number">1.</span> <span class="nav-text">more - - &gt; 站点首页不显示文章全文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#photos-gt-Next主题的-fancybox-展示图片"><span class="nav-number">2.</span> <span class="nav-text">photos - - &gt; Next主题的 fancybox 展示图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-fancybox-插件"><span class="nav-number">2.1.</span> <span class="nav-text">安装 fancybox 插件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#next-config-yml主题配置"><span class="nav-number">2.1.1.</span> <span class="nav-text">next config.yml主题配置</span></a></li></ol></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">xdongZ</p>
+  <div class="site-description" itemprop="description">哈哈壁咚咚</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xdongZ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
